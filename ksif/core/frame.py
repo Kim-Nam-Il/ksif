@@ -108,7 +108,7 @@ class Portfolio(DataFrame):
     def __getitem__(self, key):
         from pandas.core.dtypes.common import is_list_like, is_integer, is_iterator
 
-        key = com.apply_if_callable(key, self)
+        key = com._apply_if_callable(key, self)
 
         # shortcut if the key is in columns
         try:
